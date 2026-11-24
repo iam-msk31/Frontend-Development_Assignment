@@ -1,0 +1,348 @@
+:root {
+  /* Edit these to match quadcse.com exactly */
+  --ink: #0A0A0A;
+  /* headings, header and footer background */
+  --paper: #FFFFFF;
+  /* page background */
+  --card: #F6F6F7;
+  /* panels and table rows */
+  --signal: #3B5BFF;
+  /* single accent: buttons, active nav, day labels */
+  --on-signal: #FFFFFF;
+  /* text on the accent */
+  --cyan: #3B5BFF;
+  /* links and highlights */
+  --muted: #52525B;
+  --line: #E4E4E7;
+  --font: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: antiquewhite;
+  color: var(--ink);
+  line-height: 1.6;
+  font-size: 1.05rem
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font);
+  letter-spacing: -.02em;
+  font-weight: 700;
+  line-height: 1.15;
+  margin: 0 0 .6em
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem)
+}
+
+h2 {
+  font-size: clamp(1.55rem, 3vw, 2rem);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  margin-bottom: 0.75em
+}
+
+h3 {
+  font-size: 1.15rem
+}
+
+a {
+  color: var(--cyan)
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--signal);
+  outline-offset: 2px
+}
+
+.site-header {
+  background: rgb(36, 33, 28);
+  color: #fff
+}
+
+.bar {
+  max-width: 1050px;
+  margin: auto;
+  padding: .8rem 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: .6rem
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 1.25rem
+}
+
+.brand img {
+  width: 42px;
+  height: 42px
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: .3rem;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: .4rem .8rem;
+  border-radius: 6px;
+  display: block
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, .12)
+}
+
+nav a[aria-current="page"] {
+  background: #fff;
+  color: var(--ink);
+  font-weight: 700
+}
+
+main {
+  max-width: 1050px;
+  margin: auto;
+  padding: 2rem 1.2rem 3rem
+}
+
+section {
+  margin-bottom: 2.5rem
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2rem;
+  align-items: center
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px
+}
+
+.hero .when {
+  font-weight: 700;
+  font-size: 1.15rem;
+  margin: .2rem 0
+}
+
+.btn {
+  display: inline-block;
+  background: rgb(53, 49, 49);
+  color: var(--on-signal);
+  font-weight: 700;
+  padding: .7rem 1.3rem;
+  border-radius: 999px;
+  text-decoration: none;
+  border: 2px solid rgb(53, 49, 49);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700
+}
+
+.btn:hover {
+  background: var(--ink);
+  border-color: var(--ink)
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem
+}
+
+.facts div {
+  background: var(--card);
+  border: 1px solid var(--line);
+  padding: 1rem 1.2rem;
+  border-radius: 12px
+}
+
+.facts dt {
+  font-weight: 700
+}
+
+.facts dd {
+  margin: 0
+}
+
+.table-wrap {
+  overflow-x: auto
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  background: var(--card)
+}
+
+caption {
+  text-align: left;
+  font-weight: 700;
+  padding: .5rem 0
+}
+
+th,
+td {
+  border: 1px solid var(--line);
+  padding: .6rem .8rem;
+  text-align: left;
+  vertical-align: top
+}
+
+thead th {
+  background: var(--ink);
+  color: #fff
+}
+
+tbody th {
+  background: rgb(214, 214, 218)
+}
+
+td.day {
+  background:  rgb(167, 167, 170);
+  color: var(--on-signal);
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle
+}
+
+td.break {
+  background:  rgb(214, 214, 218);
+  text-align: center;
+  font-style: italic
+}
+
+.event {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1rem 1.3rem;
+  margin-bottom: 1rem
+}
+
+.event p {
+  margin: .2rem 0
+}
+
+form {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 1.5rem;
+  max-width: 680px
+}
+
+fieldset {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin: 1.2rem 0;
+  padding: .8rem 1rem
+}
+
+legend {
+  font-weight: 700;
+  padding: 0 .4rem
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-top: .9rem
+}
+
+fieldset label {
+  font-weight: 400;
+  margin: .3rem 0
+}
+
+input[type=text],
+input[type=email],
+input[type=tel],
+select,
+textarea {
+  width: 100%;
+  padding: .6rem;
+  border: 1.5px solid var(--muted);
+  border-radius: 6px;
+  font: inherit;
+  background: #fff
+}
+
+.hint {
+  font-size: .9rem;
+  color: var(--muted)
+}
+
+.media-block {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem
+}
+
+.media-block iframe,
+.media-block video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: 12px;
+  background: #000
+}
+
+audio {
+  width: 100%
+}
+
+.site-footer {
+  background: var(--ink);
+  color: #A1A1AA;
+  text-align: center;
+  padding: 1.5rem 1rem;
+  font-size: .95rem
+}
+
+.site-footer a {
+  color: #fff
+}
+
+@media(max-width:760px) {
+  .hero {
+    grid-template-columns: 1fr
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  * {
+    transition: none !important;
+    animation: none !important
+  }
+}

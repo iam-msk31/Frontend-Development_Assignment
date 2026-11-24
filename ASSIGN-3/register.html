@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register | TechFest 2027</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html"><img src="quad_ai_logo.png" alt="TechFest 2027 logo"> TechFest 2027</a>
+      <nav aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="schedule.html">Schedule</a></li>
+          <li><a href="register.html" aria-current="page">Register</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <h1>Register for TechFest 2027</h1>
+    <p>Fill in the form below. Fields marked with * are required.</p>
+    <section aria-labelledby="form-title">
+      <h2 id="form-title">Registration form</h2>
+      <form action="#" method="post">
+        <label for="name">Full name *</label>
+        <input type="text" id="name" name="name" required autocomplete="name">
+
+        <label for="email">Email address *</label>
+        <input type="email" id="email" name="email" required autocomplete="email">
+
+        <label for="phone">Phone number *</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{10}" inputmode="numeric"
+          placeholder="10-digit mobile number" autocomplete="tel">
+
+        <label for="dept">Department *</label>
+        <select id="dept" name="department" required>
+          <option value="">Choose your department</option>
+          <option>Computer Science</option>
+          <option>Information Technology</option>
+          <option>Electronics and Communication</option>
+          <option>Mechanical</option>
+          <option>Civil</option>
+          <option>Other</option>
+        </select>
+
+        <fieldset>
+          <legend>Year of study *</legend>
+          <label><input type="radio" name="year" value="1" required> First year</label>
+          <label><input type="radio" name="year" value="2"> Second year</label>
+          <label><input type="radio" name="year" value="3"> Third year</label>
+          <label><input type="radio" name="year" value="4"> Fourth year</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Event preferences (choose one or more)</legend>
+          <label><input type="checkbox" name="events" value="code-sprint"> Code Sprint (&#8377;150)</label>
+          <label><input type="checkbox" name="events" value="roborace"> RoboRace (&#8377;300)</label>
+          <label><input type="checkbox" name="events" value="hack"> Hack the Campus (&#8377;250)</label>
+          <label><input type="checkbox" name="events" value="ui"> UI Showdown (&#8377;100)</label>
+          <label><input type="checkbox" name="events" value="quiz"> Tech Quiz (&#8377;50)</label>
+          <label><input type="checkbox" name="events" value="expo"> Project Expo (free)</label>
+        </fieldset>
+
+        <label for="notes">Anything else we should know?</label>
+        <textarea id="notes" name="notes" rows="4"
+          placeholder="Team members, accessibility needs, questions"></textarea>
+
+        <p><button class="btn" type="submit">Submit registration</button> <button class="btn" type="reset">Clear
+            form</button></p>
+      </form>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>&copy; 2027 TechFest, Quad AI School of Technology &amp; Business. A fictional festival created for a coursework
+      project.</p>
+    <p><a href="contact.html">Contact the organizers</a> &middot; <a href="register.html">Register now</a></p>
+  </footer>
+</body>
+
+</html>
